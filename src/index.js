@@ -13,7 +13,13 @@ const cars = [
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/2017_Tesla_Model_X_100D_Front.jpg/560px-2017_Tesla_Model_X_100D_Front.jpg",
     name: "Model X",
     price: 120000
-  }
+  },
+
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/2020_Tesla_Model_Y%2C_front_8.1.20.jpg/560px-2020_Tesla_Model_Y%2C_front_8.1.20.jpg",
+    name: "Model Y",
+    price: 65000
+  },
 
 ]
 
@@ -22,9 +28,8 @@ function CarList() {
   return (
     <section className="carlist">
       {cars.map( (car) => {
-        const {img, name, price} = car 
         return (
-          <Car img={img} nane={name} price={price} />
+          <Car img={car.img} name={car.name} price={car.price} />
         )
       })
       }
